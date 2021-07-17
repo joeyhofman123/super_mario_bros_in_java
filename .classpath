@@ -8,5 +8,14 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="res"/>
 	<classpathentry kind="lib" path="sound"/>
+	<classpathentry kind="lib" path="C:/Users/joeyh/eclipse-workspace/super mario bros/Libs/jars/jinput.jar"/>
+	<classpathentry kind="lib" path="C:/Users/joeyh/eclipse-workspace/super mario bros/Libs/jars/jogg-0.0.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/joeyh/eclipse-workspace/super mario bros/Libs/jars/jorbis-0.0.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/joeyh/eclipse-workspace/super mario bros/Libs/jars/lwjgl.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Users/joeyh/eclipse-workspace/super mario bros/Libs/lwjgl/native/windows"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/joeyh/eclipse-workspace/super mario bros/Libs/jars/slick.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -40,7 +40,7 @@ public class KeyInput extends KeyAdapter{
 				}
 				
 				if(key == KeyEvent.VK_Z && !handler.objects.get(i).isJumping()) {
-//					AudioPlayer.getSound("jump_small").play(1f, 0.3f);
+					AudioPlayer.getSound("jump_small").play(1f, 0.3f);
 					handler.objects.get(i).setGravity(0.25f);
 					keyDown[2] = true;
 					
@@ -114,7 +114,7 @@ public class KeyInput extends KeyAdapter{
 						Game.gameState = GameState.LIVES;
 						Thread.sleep(3000);
 						Game.gameState = GameState.GAME;
-//						AudioPlayer.getMusic("background_overworld").loop(1f, 0.6f);
+						AudioPlayer.getMusic("background_overworld").loop(1f, 0.6f);
 					}catch(Exception ex) {
 						ex.printStackTrace();
 					}

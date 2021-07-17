@@ -35,16 +35,16 @@ public class Game extends Canvas implements Runnable{
 	
 	public Game() {
 		
+		AudioPlayer.load();
+		
 	if(gameState == GameState.GAME) {
+		
 		handler = new Handler();
 		cam = new Camera(0, 0);
 		new Window(WIDTH, HEIGHT, "super mario bros", this);
 		menu = new Menu();
 		this.addKeyListener(new KeyInput(handler, menu));
 		
-//		AudioPlayer.Load();
-		
-//		AudioPlayer.getMusic("background_overworld").loop(1f, 0.6f);
 		
 		Bufferdimageloader loader = new Bufferdimageloader();
 		
@@ -67,7 +67,6 @@ public class Game extends Canvas implements Runnable{
 			this.addKeyListener(new KeyInput(handler, menu));
 
 			
-//			AudioPlayer.Load();
 			
 			level = loader.loadImage("/level.png");
 			
@@ -134,7 +133,7 @@ public class Game extends Canvas implements Runnable{
 				
 				if(System.currentTimeMillis() - timer > 1000) {
 					timer += 1000;
-					System.out.println("FPS: " + frames);
+//					System.out.println("FPS: " + frames);
 					frames = 0;
 				}
 			}
@@ -212,7 +211,9 @@ public class Game extends Canvas implements Runnable{
 				}
 				
 				if(blue == 0 && green == 255 && red == 255) {
-					handler.addObject(new Questionblock(xx*16, yy*16, ID.QUESTIONBLOCK, ss));
+					GameObject questionblock = new Questionblock(xx*16, yy*16, ID.QUESTIONBLOCK, ss);
+					questionblock.powerup = "COIN";
+					handler.addObject(questionblock);
 				}
 				
 				if(blue == 255 && green == 255 && red == 0) {

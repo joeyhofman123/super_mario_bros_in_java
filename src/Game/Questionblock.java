@@ -10,6 +10,7 @@ public class Questionblock extends GameObject{
 	
 	private BufferedImage block_image;
 	private Animation blink;
+	public String powerup = "COIN";
 	
 	public Questionblock(int x, int y, ID id, Spritesheet ss) {
 		super(x, y, id, ss);

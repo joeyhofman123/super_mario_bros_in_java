@@ -98,7 +98,10 @@ public class Player extends GameObject{
 					(tempobject.getID() == ID.BLOCK2)) {
 				
 				if(getBoundsTop().intersects(tempobject.getBounds())) {
-					y = tempobject.getY() + 16;
+					if(tempobject.getID() == ID.QUESTIONBLOCK) {
+						AudioPlayer.getSound("coin").play();
+					}
+					y = tempobject.getY() + 17;
 					valY = 0;
 				}
 				

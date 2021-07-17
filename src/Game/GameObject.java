@@ -14,6 +14,7 @@ public abstract class GameObject {
 	protected float gravity = 0.4f;
 	protected float maxspeed;
 	protected float walkspeed;
+	public String powerup;
 	
 	
 	public float getMaxSpeed() {
